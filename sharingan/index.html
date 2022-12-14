@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharingan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+
+        }
+
+        #background {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            background-image: url("./image/sharingan.jpg");
+            background-size: contain;
+            background-origin: content-box;
+            background-attachment: fixed;
+            background-position: center;
+            background-blend-mode: lighten;
+            background-repeat: no-repeat;
+            z-index: 50;
+
+        }
+
+        #canvas {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+
+        }
+
+        .container {
+            --center-dim: min(calc(100vh/2.35), calc(100vw/2.35))
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .mangyekyu {
+            background-color: rgb(255, 0, 0);
+            width: var(--center-dim);
+            height: var(--center-dim);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            --main-color: black;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(359deg);
+            }
+        }
+
+        @keyframes rev-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-359deg);
+            }
+        }
+
+        .ring {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            --gap: calc(var(--center-dim) * 0.12);
+            height: calc(100% - calc(2 * var(--gap)));
+            width: calc(100% - calc(2 * var(--gap)));
+            border-radius: 50%;
+            border: calc(var(--center-dim) * 0.02) solid var(--main-color);
+            position: relative;
+            z-index: 80 !important;
+            animation: spin 15s infinite linear;
+
+        }
+
+        .center-ring {
+            --gap: calc(var(--center-dim) * 0.1) !important;
+            height: calc(100% - calc(2 * var(--gap))) !important;
+            width: calc(100% - calc(2 * var(--gap))) !important;
+            background-color: var(--main-color);
+        }
+
+        .tomoe {
+            position: absolute;
+            background-color: #000000;
+            clip-path: polygon(58% 10%, 66% 16%, 71% 24%, 74% 33%, 74% 44%, 71% 55%, 66% 65%, 60% 73%, 51% 82%, 41% 88%, 32% 92%, 23% 95%, 35% 83%, 41% 73%, 44% 62%, 34% 60%, 25% 55%, 21% 48%, 19% 39%, 20% 29%, 24% 21%, 30% 14%, 39% 10%, 48% 9%);
+            height: calc(var(--center-dim) * 0.16) !important;
+            width: calc(var(--center-dim) * 0.16) !important;
+
+        }
+
+        .tomoe-1 {
+            position: absolute;
+            top: 10%;
+            left: 55%;
+            rotate: 210deg;
+
+        }
+
+        .tomoe-2 {
+            position: absolute;
+            bottom: 34%;
+            left: 13%;
+            rotate: 90deg;
+        }
+
+        .tomoe-3 {
+            position: absolute;
+            bottom: 26%;
+            right: 17%;
+            rotate: -30deg;
+
+
+        }
+
+        .ring-2,
+        .ring-3 {
+            rotate: 60deg;
+        }
+
+        .ring-2 .tomoe {
+            transform: translate(-15%, -15%);
+        }
+
+
+
+        .ring-3 .tomoe {
+            transform: translate(-25%, -25%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id='background'></div> -->
+    <div id='canvas'>
+        <div class='container'>
+            <div class='center'>
+                <div class="mangyekyu">
+                    <div class='ring'>
+                        <div class="tomoe-1">
+                            <div class='tomoe'></div>
+                        </div>
+                        <div class="tomoe-2">
+                            <div class='tomoe'></div>
+                        </div>
+                        <div class="tomoe-3">
+                            <div class='tomoe'></div>
+                        </div>
+
+
+                        <div class='ring ring-2'>
+                            <div class="tomoe-1">
+                                <div class='tomoe'></div>
+                            </div>
+                            <div class="tomoe-2">
+                                <div class='tomoe'></div>
+                            </div>
+                            <div class="tomoe-3">
+                                <div class='tomoe'></div>
+                            </div>
+                            <div class='ring ring-3'>
+                                <div class="tomoe-1">
+                                    <div class='tomoe'></div>
+                                </div>
+                                <div class="tomoe-2">
+                                    <div class='tomoe'></div>
+                                </div>
+                                <div class="tomoe-3">
+                                    <div class='tomoe'></div>
+                                </div>
+                                <div class='ring center-ring'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
