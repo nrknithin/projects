@@ -28,6 +28,7 @@
             background-repeat: no-repeat;
             z-index: 50;
 
+            opacity: 0%;
         }
 
         #canvas {
@@ -35,11 +36,15 @@
             width: 100vw;
             height: 100vh;
             z-index: 100;
-
+            opacity: 100%;
         }
 
         .container {
-            --center-dim: min(calc(100vh/2.35), calc(100vw/2.35))
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            --center-dim: min(calc(100vh/2.35), calc(100vw/2.35));
+            animation: spin-rev 20s infinite linear;
         }
 
         .center {
@@ -47,6 +52,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            z-index: 75;
         }
 
         .mangyekyu {
@@ -68,6 +74,16 @@
 
             to {
                 transform: rotate(359deg);
+            }
+        }
+
+        @keyframes spin-rev {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-359deg);
             }
         }
 
@@ -141,13 +157,139 @@
         .ring-3 .tomoe {
             transform: translate(-25%, -25%);
         }
+
+        .left,
+        .right {
+            --csemi-dim: min(calc(50vh), calc(50vw));
+            height: calc(var(--csemi-dim) * 2);
+            width: var(--csemi-dim);
+            position: relative;
+
+            border-radius: var(--csemi-dim) 0 0 var(--csemi-dim);
+            z-index: 7;
+
+        }
+
+        .left {
+            margin-right: calc(-1 * calc(var(--csemi-dim) * 0.425));
+        }
+
+        .right {
+            rotate: 180deg;
+            margin-left: calc(-1 * calc(var(--csemi-dim) * 0.425));
+
+        }
+
+        .sharingan {
+            width: calc(var(--center-dim) * 0.335);
+            height: calc(var(--center-dim) * 0.335);
+            border-radius: 50%;
+            background-color: rgba(255, 0, 0, 0.135);
+            animation: spin 20s infinite linear;
+
+        }
+
+        .c-one {
+            position: absolute;
+            top: 1.5%;
+            right: 1.5%;
+        }
+
+        .c-two {
+            position: absolute;
+            top: 9.4%;
+            right: 36.7%;
+        }
+
+        .c-three {
+            position: absolute;
+            top: 23.5%;
+            right: 60.5%;
+        }
+
+        .c-four {
+            position: absolute;
+            top: 41.7%;
+            right: 69.7%;
+        }
+
+        .c-five {
+            position: absolute;
+            bottom: 26.3%;
+            right: 62.5%;
+        }
+
+        .c-six {
+            position: absolute;
+            bottom: 11.7%;
+            right: 40.5%;
+        }
+
+        .c-seven {
+            position: absolute;
+            bottom: 2.5%;
+            right: 8.5%;
+        }
+
+        .s1-two {
+            --center-dim: min(calc(100vh/7), calc(100vw/7));
+            background-color: rgb(255, 0, 0);
+            width: var(--center-dim);
+            height: var(--center-dim);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            --main-color: black;
+            /* opacity: 20%; */
+        }
+
+        .s1-two .ring {
+            --gap: calc(var(--center-dim) * 0.2);
+            rotate: 30deg;
+        }
+
+        .s1-two .center-ring {
+            height: calc(100% - calc(4.5 * var(--gap))) !important;
+            width: calc(100% - calc(4.5 * var(--gap))) !important;
+        }
+
+        .s1-two .tomoe {
+            height: calc(var(--center-dim) * 0.25) !important;
+            width: calc(var(--center-dim) * 0.25) !important;
+            transform: translate(-5%, -15%);
+            rotate: -15deg;
+
+        }
     </style>
 </head>
 
 <body>
-    <!-- <div id='background'></div> -->
+    <div id='background'></div>
     <div id='canvas'>
         <div class='container'>
+            <div class="left">
+                <div class="sharingan c-one"></div>
+                <div class="sharingan c-two s1-two">
+                    <div class='ring'>
+                        <div class="tomoe-1">
+                            <div class='tomoe'></div>
+                        </div>
+                        <div class="tomoe-2">
+                            <div class='tomoe'></div>
+                        </div>
+                        <div class="tomoe-3">
+                            <div class='tomoe'></div>
+                        </div>
+                        <div class='ring center-ring'></div>
+                    </div>
+                </div>
+                <div class="sharingan c-three"></div>
+                <div class="sharingan c-four"></div>
+                <div class="sharingan c-five"></div>
+                <div class="sharingan c-six"></div>
+                <div class="sharingan c-seven"></div>
+            </div>
             <div class='center'>
                 <div class="mangyekyu">
                     <div class='ring'>
@@ -187,6 +329,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="right">
+                <div class="sharingan c-one"></div>
+                <div class="sharingan c-two"></div>
+                <div class="sharingan c-three"></div>
+                <div class="sharingan c-four"></div>
+                <div class="sharingan c-five"></div>
+                <div class="sharingan c-six"></div>
+                <div class="sharingan c-seven"></div>
             </div>
         </div>
     </div>
