@@ -37,6 +37,10 @@
             height: 100vh;
             z-index: 100;
             opacity: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         .container {
@@ -45,6 +49,10 @@
             align-items: center;
             --center-dim: min(calc(100vh/2.35), calc(100vw/2.35));
             animation: spin-rev 20s infinite linear;
+            max-width: min(100vh, 100vw);
+            max-height: min(100vh, 100vw);
+            border-radius: 50%;
+            overflow: hidden;
         }
 
         .center {
@@ -185,7 +193,10 @@
             height: calc(var(--center-dim) * 0.335);
             border-radius: 50%;
             background-color: rgba(255, 0, 0, 0.135);
-            animation: spin 20s infinite linear;
+            animation: spin 5s infinite linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
         }
 
@@ -261,6 +272,67 @@
             rotate: -15deg;
 
         }
+
+        .s1-one {
+            background-color: rgb(255, 0, 0);
+            display: none;
+
+        }
+
+        .s1-one .square {
+            rotate: 38deg;
+            background-color: black;
+            width: 50%;
+            height: 50%;
+            position: relative;
+        }
+
+
+
+
+        .s1-one .square>div {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 25px solid black;
+            position: absolute;
+
+        }
+
+        .s1-one .square .triangle1 {
+            right: -19px;
+            top: -5px;
+            rotate: -36deg;
+        }
+
+        .s1-one .square .triangle2 {
+            right: 16px;
+            top: 0px;
+            rotate: -125deg;
+        }
+
+        .s1-one .square .triangle3 {
+            left: -19px;
+            bottom: -5px;
+            rotate: 144deg;
+        }
+
+        .s1-one .square .triangle4 {
+            left: 16px;
+            bottom: 0px;
+            rotate: 55deg;
+        }
+
+        .s1-one .center-circle {
+            position: absolute;
+            width: 10%;
+            height: 10%;
+            background-color: rgb(0, 0, 0);
+            border: 4px solid rgb(255, 0, 0);
+            z-index: 99;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -269,7 +341,15 @@
     <div id='canvas'>
         <div class='container'>
             <div class="left">
-                <div class="sharingan c-one"></div>
+                <div class="sharingan c-one s1-one">
+                    <div class='center-circle'></div>
+                    <div class="square">
+                        <div class="triangle1"></div>
+                        <div class="triangle2"></div>
+                        <div class="triangle3"></div>
+                        <div class="triangle4"></div>
+                    </div>
+                </div>
                 <div class="sharingan c-two s1-two">
                     <div class='ring'>
                         <div class="tomoe-1">
