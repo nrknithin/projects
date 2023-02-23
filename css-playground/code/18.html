@@ -1,0 +1,58 @@
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<style>
+    body {
+        margin: 0;
+        background: #5C434C;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        transform: translate(-10px, -10px);
+    }
+
+    div {
+        --dim: 100%;
+        width: var(--dim);
+        height: var(--dim);
+        position: relative;
+        overflow: hidden;
+    }
+
+    div::after {
+        position: absolute;
+        --dim: 80px;
+        content: "";
+        border-radius: 50%;
+        width: calc(var(--dim)*2);
+        height: calc(var(--dim)*2);
+        right: calc(-1*var(--dim));
+        bottom: calc(-1*var(--dim));
+    }
+
+    div:nth-child(odd)::after {
+        background: #F09462;
+    }
+
+    div:nth-child(even)::after {
+        background: #F5D6B4;
+    }
+
+    div:nth-child(5)::after,
+    div:nth-child(7)::after {
+        background: #F5D6B4;
+    }
+
+    div:nth-child(6)::after,
+    div:nth-child(8)::after {
+        background: #F09462;
+    }
+</style>

@@ -1,0 +1,38 @@
+<div class="birdie"></div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1A4341
+    }
+
+    .birdie {
+        border: 100px solid;
+        border-radius: 50%;
+        border-color: #F3AC3C transparent transparent transparent;
+        rotate: 45deg;
+        position: relative;
+    }
+
+    .birdie:before {
+        content: "";
+        position: absolute;
+        border: 75px solid;
+        border-radius: 50%;
+        border-color: transparent transparent #998235 #998235;
+        top: -75px;
+        left: -75px
+    }
+
+    .birdie:after {
+        content: "";
+        position: absolute;
+        border: 15px solid;
+        border-radius: 50%;
+        border-color: #0B2429;
+        top: -15px;
+        left: -57px
+    }
+</style>

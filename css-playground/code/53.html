@@ -1,0 +1,41 @@
+<div class="circle">
+    <div class="rect">
+    </div>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #19191A;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            background: #4F77FF;
+            transform: translateY(-25px);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .rect {
+            position: absolute;
+            width: 75px;
+            height: 125px;
+            background: #F9E492;
+            top: 75;
+            overflow: hidden;
+
+        }
+
+        .rect::after {
+            content: "";
+            width: 150px;
+            height: 150px;
+            top: -75px;
+            background: #9AD5FF;
+            position: absolute;
+            border-radius: 50%;
+        }
+    </style>

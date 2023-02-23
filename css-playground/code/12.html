@@ -1,0 +1,60 @@
+<div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+</div>
+<style>
+    body {
+        background: #f5d6b4;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    div {
+        display: flex
+    }
+
+    .c {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-width: 20px;
+        border-style: solid;
+        border-color: #d86f45 #d86f45 transparent transparent;
+        rotate: -45deg
+    }
+
+    .c:nth-child(2n-1) {
+        position: absolute;
+        rotate: 135deg
+    }
+
+    .c:first-child {
+        left: 70px
+    }
+
+    .c:last-child {
+        right: 70px
+    }
+
+    .c:nth-child(1)::before,
+    .c:nth-child(3)::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #d86f45;
+        border-radius: 50%
+    }
+
+    .c:nth-child(1)::before {
+        right: -8.1px;
+        top: 48.5px
+    }
+
+    .c:nth-child(3)::after {
+        left: -8.1px;
+        bottom: 48.5px
+    }
+</style>

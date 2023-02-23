@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="head">
+        <div class="eyes">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nose">
+        </div>
+    </div>
+    <div class="chin">
+        <div class="beard"></div>
+        <div class="beard"></div>
+        <div class="beard"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    .container {
+        width: 120px;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .head {
+        background: #4F77FF;
+        width: 120px;
+        height: 100px;
+        border-radius: 60px 60px 10px 10px;
+        position: relative;
+    }
+
+    .eyes {
+        display: flex;
+        justify-content: center;
+        margin-top: 53px;
+        gap: 10px;
+    }
+
+    .eyes div {
+        width: 40px;
+        height: 40px;
+        background: #191919;
+        border-radius: 50%;
+    }
+
+    .nose {
+        position: absolute;
+        right: 50px;
+        width: 20px;
+        height: 20px;
+        background: #191919;
+        border-radius: 50%;
+        bottom: -11px;
+    }
+
+    .chin {
+        width: 80px;
+        height: 30px;
+        background: #4F77FF;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 5px
+    }
+
+    .beard {
+        width: 10px;
+        height: 10px;
+        background: #191919;
+        border-radius: 10px 10px 0 0;
+    }
+</style>

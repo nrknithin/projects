@@ -1,0 +1,43 @@
+<div></div>
+<style>
+    body {
+        background: #191210;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div {
+        width: 50px;
+        height: 50px;
+        background: #84271C;
+        border-radius: 50%;
+        outline: 20px solid #ECA03D;
+        border: 25px solid #191210;
+        position: relative;
+    }
+
+    div::before,
+    div::after {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-width: 20px;
+        border-color: #ECA03D #ECA03D transparent transparent;
+        border-style: solid;
+    }
+
+    div::after {
+        top: -25px;
+        right: -125px;
+        rotate: -45deg;
+    }
+
+    div::before {
+        bottom: -25px;
+        left: -125px;
+        rotate: 135deg;
+    }
+</style>

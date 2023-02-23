@@ -1,0 +1,36 @@
+<div class="petal one"></div>
+<div class="petal two"></div>
+<div class="petal three"></div>
+<style>
+    body {
+        background: #0B2429;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .petal {
+        width: 120px;
+        height: 120px;
+        border-radius: 50% 0 50% 50%;
+    }
+
+    .two {
+        background: #998235;
+        z-index: 9;
+    }
+
+    .one,
+    .three {
+        background: #F3AC3C;
+    }
+
+    .one {
+        transform: translate(60px, 60px);
+        z-index: 10;
+    }
+
+    .three {
+        transform: translate(-60px, -60px) rotate(180deg)
+    }
+</style>

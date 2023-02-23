@@ -1,0 +1,139 @@
+<main>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="dock1"></div>
+    <div class="dock2"></div>
+    <div class="line1"></div>
+    <div class="line2"></div>
+</main>
+<style>
+    .box1,
+    .box2 {
+        border: 10px solid #5dbcf9;
+        position: absolute;
+    }
+
+    .dock1,
+    body,
+    main {
+        display: flex;
+    }
+
+    .box1,
+    .box2,
+    .dock1,
+    .dock1::after {
+        position: absolute;
+    }
+
+    .dock1::after,
+    .line1,
+    .line2 {
+        background: #5dbcf9;
+    }
+
+    body {
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    main {
+        width: 200px;
+        height: 168px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .box1 {
+        width: 30px;
+        height: 20px;
+    }
+
+    .box2 {
+        width: 80px;
+        height: 45px;
+        top: 30px;
+        border-color: #5dbcf9 #5dbcf9 transparent;
+    }
+
+    .dock1 {
+        width: 72px;
+        height: 72px;
+        border: 11px solid #5dbcf9;
+        rotate: 45deg;
+        top: 61.7px;
+        border-color: #5dbcf9 transparent transparent #5dbcf9;
+        transform: skew(-15deg, -15deg);
+        justify-content: center;
+
+    }
+
+    .dock1::after {
+        content: "";
+        color: red;
+        rotate: -45deg;
+        transform: translateX(38px);
+        height: 180px;
+        width: 8px;
+
+    }
+
+    .dock2::after,
+    .dock2::before {
+        content: "";
+        width: 10px;
+        background: #191919;
+
+    }
+
+    .dock2 {
+        width: 125px;
+        height: 125px;
+        border: 11px solid;
+        rotate: 45deg;
+        top: 35px;
+        border-color: transparent #5dbcf9 #5dbcf9 transparent;
+        position: absolute;
+        transform: skew(15deg, 15deg);
+
+    }
+
+    .dock2::after,
+    .dock2::before,
+    .line1,
+    .line2 {
+        position: absolute;
+        height: 10px;
+
+    }
+
+    .line1 {
+        width: 200px;
+        bottom: 10px;
+        border: 10px solid #191919;
+
+    }
+
+    .line2 {
+        width: 110px;
+        bottom: 0;
+
+    }
+
+    .dock2::before {
+        left: -20px;
+        bottom: -21px;
+
+    }
+
+    .dock2::after {
+        right: -21px;
+        top: -20px;
+
+    }
+</style>

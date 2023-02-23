@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="orange"></div>
+    <div class="blue"></div>
+</div>
+<style>
+    body {
+        background: #222;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 180px;
+        transform: translate(-7.5px, -17.5px)
+    }
+
+    .container>* {
+        rotate: 45deg;
+        position: relative;
+        width: 50px;
+        height: 70px;
+        border-width: 0 0 30px 30px;
+        border-style: solid;
+        border-radius: 0 0 0 10px
+    }
+
+    .orange {
+        transform: translate(20px, -30px);
+        border-color: #F2994A;
+    }
+
+    .blue {
+        rotate: -135deg;
+        transform: translate(-15px, -45px);
+        border-color: #2D9CDB;
+    }
+</style>

@@ -1,0 +1,51 @@
+<div class="circle">
+    <span>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </span>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1A4341;
+    }
+
+    .circle {
+        display: flex;
+        align-item: center;
+        justify-content: center;
+        background: #998235;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    span {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        bottom: 25px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bar {
+        background: #F3AC3C;
+        height: 20px;
+    }
+
+    .bar:nth-child(2n-1) {
+        background: #1A4341;
+    }
+</style>

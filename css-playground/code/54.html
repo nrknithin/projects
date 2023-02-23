@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="fingers">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="palm"></div>
+    <div class="arm"></div>
+    <div class="thumb">
+        <div></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F9E492;
+    }
+
+
+    .container {
+        width: 100px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .fingers {
+        width: 100px;
+        height: 60px;
+        display: flex;
+        margin-left: 10px;
+        gap: 5px;
+        align-items: flex-end;
+    }
+
+    .palm {
+        width: 100px;
+        height: 40px;
+        background: #191919;
+        border-radius: 0 0 10px 10px;
+        margin-top: 3px
+    }
+
+    .arm {
+        width: 50px;
+        height: 45px;
+        background: #191919;
+        border-radius: 0 0 10px 10px
+    }
+
+    .fingers div {
+        width: 20px;
+        background: #191919;
+        border-radius: 10px;
+        margin-bottom: 2px;
+
+    }
+
+    .one {
+        height: 45px;
+    }
+
+    .two {
+        height: 55px;
+    }
+
+    .three {
+        height: 45px;
+    }
+
+    .four {
+        height: 35px;
+    }
+
+    .thumb div {
+        content: "a";
+        position: absolute;
+        width: 20px;
+        background: #191919;
+        border-radius: 20px;
+        border: 5px solid #F9E492;
+        height: 65px;
+        rotate: 60deg;
+        left: 0;
+    }
+
+    .thumb {
+        position: absolute;
+        left: 0;
+        transform: translate(2px, 30px)
+    }
+</style>

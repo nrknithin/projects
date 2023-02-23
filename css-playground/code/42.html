@@ -1,0 +1,66 @@
+<div class="baby">
+    <span class="hair"></span>
+    <span class="eyes"></span>
+    <span class="lip"></span>
+</div>
+<div class="baby">
+    <span class="hair"></span>
+    <span class="eyes"></span>
+    <span class="lip"></span>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #293462;
+    }
+
+
+    .baby {
+        width: 100px;
+        height: 200px;
+        border-radius: 120px 0 0 60px;
+        background: #FE5F55;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .baby:nth-child(2) {
+        transform: rotateY(180deg)
+    }
+
+    .eyes,
+    .hair,
+    .lip {
+        background: #FFF1C1;
+    }
+
+    .eyes {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        right: 20px;
+        border-radius: 50%;
+        bottom: 50px;
+    }
+
+    .lip {
+        position: absolute;
+        width: 20px;
+        height: 10px;
+        right: 0;
+        border-radius: 20px 0 0 20px;
+        bottom: 20px;
+    }
+
+    .hair {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        right: 0px;
+        border-radius: 50%;
+        top: -50px;
+    }
+</style>

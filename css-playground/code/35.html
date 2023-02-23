@@ -1,0 +1,41 @@
+<div class="icecream"></div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #293462;
+    }
+
+
+    .icecream {
+        width: 100px;
+        height: 150px;
+        background: #FFF1C1;
+        transform: translateY(-25px);
+        border-radius: 50px 50px 20px 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .icecream:after {
+        content: "";
+        position: absolute;
+        background: #A64942;
+        width: 30px;
+        height: 10px;
+        bottom: -10px;
+    }
+
+    .icecream:before {
+        content: "";
+        position: absolute;
+        background: #FE5F55;
+        width: 30px;
+        height: 50px;
+        bottom: -50px;
+        border-radius: 0 0 10px 10px
+    }
+</style>

@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="top"></div>
+    <div class="bottom"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #6592CF;
+    }
+
+    .container {
+        transform: translateY(-50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top {
+        border: 100px solid;
+        border-color: transparent transparent #243D83 transparent;
+    }
+
+    .bottom {
+        width: 150px;
+        height: 100px;
+        background: #243D83;
+        border-radius: 0 0 10px 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 10px;
+        background: #EEB850;
+        border-radius: 10px;
+        top: -5px
+    }
+
+    .bottom::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #EEB850;
+        border-radius: 10px 10px 0 0;
+        bottom: 0;
+    }
+</style>

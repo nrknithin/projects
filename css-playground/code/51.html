@@ -1,0 +1,65 @@
+<div class="hand1"></div>
+<div class="main"></div>
+<div class="hand2"></div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #293462;
+    }
+
+    .main {
+        background: #FFF1C1;
+        width: 150px;
+        height: 100px;
+        border-radius: 0 0 50px 50px;
+    }
+
+    .hand1,
+    .hand2 {
+        width: 55px;
+        height: 40px;
+        transform: translate(15px, -20px);
+        border-radius: 50px 0 0 50px;
+        border: 10px solid #FFF1C1;
+        border-color: #FFF1C1 transparent #FFF1C1 #FFF1C1;
+        position: relative;
+    }
+
+    .hand2 {
+        transform: translate(-15px, -20px);
+        border-radius: 0 50px 50px 0;
+        border-color: #FFF1C1 #FFF1C1 #FFF1C1 transparent;
+    }
+
+    .hand1::after,
+    .hand1::before {
+        content: "";
+        position: absolute;
+        right: -55px;
+        top: 10px;
+        background: #FE5F55;
+        width: 40px;
+        height: 10px;
+        border-radius: 30px;
+
+    }
+
+    .hand1::before {
+        top: 30px;
+    }
+
+    .hand2::after {
+        content: "";
+        position: absolute;
+        left: -55px;
+        top: 30px;
+        background: #FE5F55;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+
+    }
+</style>

@@ -1,0 +1,96 @@
+<div class="three">
+    <div class="cloud">
+        <div class="stick"></div>
+    </div>
+    <div class="cloud">
+        <div class="stick"></div>
+    </div>
+    <div class="cloud">
+        <div class="stick"></div>
+    </div>
+
+</div>
+<div class="four">
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #6592CF;
+        padding: 25px;
+    }
+
+    .stick {
+        background: #243D83;
+        height: 50px;
+        width: 10px;
+        transform: translateY(20px);
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .stick::after {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        background: #243D83;
+    }
+
+    .three,
+    .four {
+        display: flex;
+        width: 100%;
+    }
+
+    .four {
+        justify-content: space-between;
+        max-width: 145px;
+        padding-right: 20px
+    }
+
+    .cloud {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: #EEB850;
+        display: flex;
+        justify-content: center;
+    }
+
+    .three>div:nth-child(1) {
+        transform: translateX(5px);
+    }
+
+    .three>div:nth-child(3) {
+        transform: translateX(-5px);
+    }
+
+    .three>div:nth-child(2) {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background: #EEB850;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-20px);
+    }
+
+    .three>div:nth-child(2) .stick {
+        transform: translateY(40px);
+    }
+
+    .four>.stick {
+        transform: translateY(15px);
+
+    }

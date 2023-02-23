@@ -1,0 +1,29 @@
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: #1A4341;
+        gap: 25px;
+    }
+
+
+    .bar {
+        width: 50px;
+        height: 200px;
+        border-radius: 0 0 50px 50px;
+        background: #998235;
+    }
+
+    .bar:nth-child(2n-1) {
+        background: #F3AC3C;
+        rotate: 180deg;
+        transform: translateY(-100px)
+    }
+</style>

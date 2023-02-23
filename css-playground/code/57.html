@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="pillar">
+        <div class="yellow">
+            <div class="blue"></div>
+        </div>
+    </div>
+    <div class="pillar">
+        <div class="yellow">
+            <div class="blue"></div>
+        </div>
+    </div>
+    <div class="pillar">
+        <div class="yellow">
+            <div class="blue"></div>
+        </div>
+    </div>
+    <div class="pillar">
+        <div class="yellow">
+            <div class="blue"></div>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+
+    .container {
+        width: 110px;
+        height: 110px;
+        background: #4F77FF;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .pillar {
+        width: 60px;
+        height: 60px;
+        background: #191919;
+        border-radius: 50%;
+        transform: translateY(-20px);
+        position: relative;
+    }
+
+    .yellow {
+        width: 45px;
+        height: 45px;
+        background: #F9E492;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .container>div:nth-child(2) .yellow {
+        left: 15px;
+    }
+
+    .container>div:nth-child(3) .yellow {
+        top: 15px;
+    }
+
+    .container>div:nth-child(4) .yellow {
+        top: 15px;
+        left: 15px;
+    }
+
+    .blue {
+        width: 30px;
+        height: 30px;
+        background: #4F77FF;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .container>div:nth-child(2) .blue {
+        left: 15px;
+    }
+
+    .container>div:nth-child(3) .blue {
+        top: 15px;
+    }
+
+    .container>div:nth-child(4) .blue {
+        top: 15px;
+        left: 15px;
+    }
+</style>

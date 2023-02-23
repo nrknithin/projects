@@ -1,0 +1,56 @@
+<div class="circle t1"></div>
+<div class="container">
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+</div>
+<div class="circle t2"></div>
+<style>
+    body {
+        margin: 0;
+        background: #09042A;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100vh
+    }
+
+    .container {
+        max-width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circle {
+        --dimC: 60px;
+        width: var(--dimC);
+        height: var(--dimC);
+        border-radius: 50%;
+        background: #09042A;
+        outline: 10px solid #E78481;
+    }
+
+    .square {
+        --dimS: 60px;
+        background: #E78481;
+        width: var(--dimS);
+        height: var(--dimS)
+    }
+
+    .t1,
+    .t2 {
+        background: #F5BB9C;
+        outline: 10px solid #09042A !important;
+    }
+
+    .t1 {
+        transform: translateY(7px);
+    }
+
+    .t2 {
+        transform: translateY(-7px);
+    }
+</style>

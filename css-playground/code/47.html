@@ -1,0 +1,95 @@
+<div class="circle">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="dot-1"></div>
+    <div class="dot-2"></div>
+    <div class="dot-3"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1A4341;
+    }
+
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        background: #F3AC3C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+
+    }
+
+    .line {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+    }
+
+    .line:before {
+        radius: 20px;
+        position: absolute;
+        content: "";
+        border-radius: 20px;
+        width: 10px;
+        height: 105px;
+        bottom: -5px;
+        background: #F3AC3C;
+    }
+
+    .line:after {
+        radius: 20px;
+        position: absolute;
+        content: "";
+        border-radius: 20px;
+        width: 10px;
+        height: 85px;
+        top: -5px;
+        background: #F3AC3C;
+    }
+
+    .line:nth-child(2) {
+        rotate: 60deg
+    }
+
+    .line:nth-child(3) {
+        rotate: 120deg
+    }
+
+    .dot-1,
+    .dot-2,
+    .dot-3 {
+        position: absolute;
+        background: #998235;
+        border-radius: 50%;
+    }
+
+    .dot-1 {
+        width: 10px;
+        height: 10px;
+        top: 20px;
+        right: 20px
+    }
+
+    .dot-2 {
+        width: 20px;
+        height: 20px;
+        top: 65px;
+    }
+
+    .dot-3 {
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        left: 20px;
+    }
+</style>

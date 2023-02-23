@@ -1,0 +1,38 @@
+<div class="outer">
+    <div class="inner"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #293462;
+    }
+
+
+    .outer {
+        width: 200px;
+        height: 120px;
+        background: #A64942;
+        border-radius: 20px;
+    }
+
+    .inner {
+        width: 200px;
+        height: 100px;
+        background: #FE5F55;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner::after {
+        content: "";
+        width: 140px;
+        height: 40px;
+        background: #A64942;
+        border-radius: 20px;
+    }
+</style>

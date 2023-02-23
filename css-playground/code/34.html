@@ -1,0 +1,44 @@
+<div class="light-orange"></div>
+<div class="orange"></div>
+<div class="green"></div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #007065;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+
+    .light-orange,
+    .orange,
+    .green {
+        width: 250px;
+        height: 100px;
+        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+
+    .green {
+        background: #00A79D;
+        transform: translateY(-50px);
+        z-index: 1;
+
+    }
+
+    .light-orange {
+        background: #FFEECF;
+        transform: translateY(50px);
+        z-index: 3;
+
+    }
+
+    .orange {
+        background: #F5C181;
+        transform: translateY(0px);
+        z-index: 2;
+
+    }
+</style>

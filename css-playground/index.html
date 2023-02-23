@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+
+            color-scheme: light dark;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1 {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            width: max(100%, 300px);
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .tile {
+            max-width: 400px;
+            max-height: 300px;
+            width: 400px;
+            height: 300px;
+            border-radius: 2px;
+            background-color: rgb(80, 80, 80);
+            -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+            -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+            box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS PlayGround</h1>
+    <div class='container' id='main-container'>
+    </div>
+    <script>
+
+        let mainContainer = document.querySelector("#main-container");
+        const dataArray = [
+            { name: "Simply Square", id: "1" },
+            { name: "Carrom", id: "2" },
+            { name: "Push Button", id: "3" },
+            { name: "Push Button", id: "4" },
+            { name: "Push Button", id: "5" },
+            { name: "Push Button", id: "6" },
+            { name: "Push Button", id: "7" },
+            { name: "Push Button", id: "8" },
+            { name: "Push Button", id: "9" },
+            { name: "Push Button", id: "10" },
+            { name: "Push Button", id: "11" },
+            { name: "Push Button", id: "12" },
+            { name: "Push Button", id: "13" },
+            { name: "Push Button", id: "14" },
+            { name: "Push Button", id: "15" },
+            { name: "Push Button", id: "16" },
+            { name: "Push Button", id: "17" },
+            { name: "Push Button", id: "18" },
+            { name: "Push Button", id: "19" },
+            { name: "Push Button", id: "20" },
+            { name: "Push Button", id: "21" },
+            { name: "Push Button", id: "22" },
+            { name: "Push Button", id: "23" },
+            { name: "Push Button", id: "24" },
+            { name: "Push Button", id: "25" },
+            { name: "Push Button", id: "26" },
+            { name: "Push Button", id: "27" },
+            { name: "Push Button", id: "28" },
+            { name: "Push Button", id: "29" },
+            { name: "Push Button", id: "30" },
+            { name: "Push Button", id: "31" },
+            { name: "Push Button", id: "32" },
+            { name: "Push Button", id: "33" },
+            { name: "Push Button", id: "34" },
+            { name: "Push Button", id: "35" },
+            { name: "Push Button", id: "36" },
+            { name: "Push Button", id: "37" },
+            { name: "Push Button", id: "38" },
+            { name: "Push Button", id: "39" },
+            { name: "Push Button", id: "40" },
+            { name: "Push Button", id: "41" },
+            { name: "Push Button", id: "42" },
+            { name: "Push Button", id: "43" },
+            { name: "Push Button", id: "44" },
+            { name: "Push Button", id: "45" },
+            { name: "Push Button", id: "46" },
+            { name: "Push Button", id: "47" },
+            { name: "Push Button", id: "48" },
+            { name: "Push Button", id: "49" },
+            { name: "Push Button", id: "50" },
+            { name: "Push Button", id: "51" },
+            { name: "Push Button", id: "52" },
+            { name: "Push Button", id: "53" },
+            { name: "Push Button", id: "54" },
+            { name: "Push Button", id: "55" },
+            { name: "Push Button", id: "56" },
+            { name: "Push Button", id: "57" },
+            { name: "Push Button", id: "58" },
+            { name: "Push Button", id: "59" },
+            { name: "Push Button", id: "60" },
+            { name: "Push Button", id: "61" },
+            { name: "Push Button", id: "62" },
+            { name: "Push Button", id: "63" },
+            { name: "Push Button", id: "64" },
+            { name: "Push Button", id: "65" },
+            { name: "Push Button", id: "66" },
+            { name: "Push Button", id: "67" },
+            { name: "Push Button", id: "68" },
+            { name: "Push Button", id: "69" },
+            { name: "Push Button", id: "70" },
+            { name: "Push Button", id: "71" },
+            { name: "Push Button", id: "72" },
+            { name: "Push Button", id: "73" },
+            { name: "Push Button", id: "74" },
+            { name: "Push Button", id: "75" },
+            { name: "Push Button", id: "76" },
+            { name: "Push Button", id: "77" },
+            { name: "Push Button", id: "78" },
+            { name: "Push Button", id: "79" },
+            { name: "Push Button", id: "80" },
+            { name: "Push Button", id: "81" },
+            { name: "Push Button", id: "82" },
+            { name: "Push Button", id: "83" },
+            { name: "Push Button", id: "84" },
+            { name: "Push Button", id: "85" },
+            { name: "Push Button", id: "86" },
+            { name: "Push Button", id: "87" },
+            { name: "Push Button", id: "88" },
+            { name: "Push Button", id: "89" },
+            { name: "Push Button", id: "90" },
+            { name: "Push Button", id: "91" },
+            { name: "Push Button", id: "92" },
+            { name: "Push Button", id: "93" },
+            { name: "Push Button", id: "94" },
+            { name: "Push Button", id: "95" },
+            { name: "Push Button", id: "96" },
+            { name: "Push Button", id: "97" },
+            { name: "Push Button", id: "98" },
+            { name: "Push Button", id: "99" },
+
+
+        ];
+        let cssTiles = dataArray.map((item) => {
+            let tile = document.createElement("iframe");
+            tile.classList.add("tile");
+            tile.src = `./code/${item.id}.html`;
+            return tile;
+        })
+        mainContainer.append(...cssTiles)
+    </script>
+</body>
+
+</html>

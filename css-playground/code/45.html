@@ -1,0 +1,51 @@
+<div class="box1">
+    <div class="box2"></div>
+</div>
+<div class="line"></div>
+<style>
+    body {
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #1A4341;
+    }
+
+
+    .box1 {
+        width: 210px;
+        height: 180px;
+        border: 40px solid #F3AC3C;
+        border-width: 0 30px 30px 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box2 {
+        width: 90px;
+        height: 120px;
+        border: 40px solid #998235;
+        border-width: 0 30px 30px 30px;
+    }
+
+    .line {
+        height: 30px;
+        width: 270px;
+        background: #998235;
+        margin-top: 30px;
+        postion: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .line:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 30px;
+        background: #F3AC3C;
+        bottom: 0;
+    }
+</style>

@@ -1,0 +1,52 @@
+<div class="red h"></div>
+<div class="red v"></div>
+<div class="yellow"></div>
+<style>
+    body {
+        margin: 0;
+        background: #293462;
+    }
+
+    body>* {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .red {
+        background: #FE5F55;
+        --width: 300px;
+        --height: 150px;
+        width: var(--width);
+        height: var(--height);
+    }
+
+    .red::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        background: #A64942;
+        width: var(--width);
+        height: 50px;
+    }
+
+    .v {
+        height: var(--width);
+        width: var(--height);
+
+    }
+
+    .red.v::after {
+        height: var(--width);
+        width: 50px;
+        bottom: 0;
+        right: -50px;
+    }
+
+    .yellow {
+        background: #FFF1C1;
+        width: 200px;
+        height: 200px
+    }
+</style>

@@ -1,0 +1,124 @@
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+<div class="four"></div>
+<style>
+    .one,
+    .one::after {
+        border-radius: 20px;
+        background: #f3ac3c
+    }
+
+    .one,
+    .one::after,
+    .two {
+        background: #f3ac3c
+    }
+
+    .four,
+    .one,
+    .three,
+    .two {
+        position: relative
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1a4341;
+        flex-direction: column;
+        height: 100vh
+    }
+
+    .one {
+        height: 20px;
+        width: 150px;
+        transform: translateX(25px)
+    }
+
+    .one::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        height: 40px;
+        width: 20px
+    }
+
+    .two::after,
+    .two::before {
+        left: 90px;
+        border-radius: 20px;
+        width: 20px;
+        background: #998235;
+        height: 20px;
+        position: absolute;
+        content: ""
+    }
+
+    .two {
+        height: 20px;
+        width: 20px
+    }
+
+    .two::after {
+        top: 60px
+    }
+
+    .two::before {
+        top: 30px
+    }
+
+    .four::before,
+    .three::after {
+        border-radius: 50px;
+        top: 30px
+    }
+
+    .four,
+    .three,
+    .three::after {
+        background: #f3ac3c
+    }
+
+    .three {
+        height: 20px;
+        width: 50px;
+        border-radius: 10px 10px 0 0
+    }
+
+    .three::after {
+        position: absolute;
+        content: "";
+        height: 70px;
+        width: 50px;
+        right: -25px;
+        z-index: 10
+    }
+
+    .four::after,
+    .four::before {
+        position: absolute;
+        content: "";
+        background: #998235
+    }
+
+    .four {
+        height: 140px;
+        width: 100px;
+        border-radius: 20px;
+        overflow: hidden
+    }
+
+    .four::after {
+        height: 85px;
+        width: 100px;
+        bottom: 0
+    }
+
+    .four::before {
+        height: 100px;
+        width: 50px
+    }
+</style>

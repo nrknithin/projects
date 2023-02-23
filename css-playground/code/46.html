@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="mountain1">
+        <div></div>
+    </div>
+    <div class="mountain2">
+        <div></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #293462;
+    }
+
+
+    .container {
+        width: 200px;
+        height: 200px;
+        background: #FFF1C1;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .mountain1>div {
+        width: 50px;
+        height: 50px;
+        background: #FE5F55;
+        rotate: 45deg;
+    }
+
+    .mountain1 {
+        transform: translate(5px, 140px)
+    }
+
+    .mountain2 {
+        transform: translate(-10px, 101px)
+    }
+
+    .mountain2>div {
+        width: 200px;
+        height: 200px;
+        background: #FE5F55;
+        rotate: 45deg;
+    }
+</style>

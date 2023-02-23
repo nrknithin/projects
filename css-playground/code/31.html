@@ -1,0 +1,36 @@
+<div class="equals"></div>
+<style>
+    .equals:after,
+    .equals:before {
+        position: absolute;
+        content: "";
+        height: 200px;
+        width: 100px
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #aa445f
+    }
+
+    .equals {
+        width: 50px;
+        height: 200px;
+        position: relative
+    }
+
+    .equals:before {
+        background: #f7ec7d;
+        border-radius: 200px 0 0 200px;
+        right: 50px
+    }
+
+    .equals:after {
+        background: #e38f66;
+        border-radius: 0 200px 200px 0;
+        left: 50px
+    }
+</style>

@@ -1,0 +1,46 @@
+<div class="tunnel"></div>
+<style>
+    body,
+    .tunnel:before {
+        background: #6592cf
+    }
+
+    .tunnel:after,
+    .tunnel:before {
+        position: absolute;
+        content: ""
+    }
+
+    .tunnel,
+    .tunnel:after {
+        background: #243d83
+    }
+
+    body {
+        margin: 0
+    }
+
+    body,
+    .tunnel {
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    .tunnel {
+        width: 250px;
+        height: 250px
+    }
+
+    .tunnel:before {
+        width: 150px;
+        height: 150px;
+        rotate: 15deg
+    }
+
+    .tunnel:after {
+        width: 75px;
+        height: 75px;
+        rotate: 30deg
+    }
+</style>

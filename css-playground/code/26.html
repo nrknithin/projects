@@ -1,0 +1,38 @@
+<div></div>
+<style>
+    body {
+        margin: 0px;
+        background: #6592CF;
+        display: flex;
+        justify-content: center;
+        align-item: flex-end;
+    }
+
+    div,
+    div::after,
+    div::before {
+        width: 80px;
+        height: 80px;
+        border: 20px solid;
+        border-radius: 50%;
+        border-color: #060F55 #060F55 transparent transparent;
+        rotate: 135deg;
+        transform: translate(99px, -99px);
+        position: relative
+    }
+
+    div::before,
+    div::after {
+        content: "";
+        position: absolute;
+        rotate: 180deg;
+    }
+
+    div::before {
+        transform: translate(161.7px, 20px);
+    }
+
+    div::after {
+        transform: translate(20px, -121.7px);
+    }
+</style>

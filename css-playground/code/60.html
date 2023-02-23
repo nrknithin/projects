@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="one">
+        <div class="two">
+            <div class="three"></div>
+        </div>
+    </div>
+</div>
+<style>
+    .one::before,
+    .three::before,
+    .two::before {
+        right: -70.5px;
+        top: -70.5px
+    }
+
+    .one::after,
+    .three::after,
+    .two::after {
+        position: absolute;
+        content: "";
+        left: -70.5px;
+        bottom: -70.5px
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919
+    }
+
+    .container {
+        width: 200px;
+        height: 150px;
+        background: #4f77ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .one,
+    .one::after,
+    .one::before {
+        width: 106px;
+        height: 106px;
+        background: #191919;
+        z-index: 1;
+    }
+
+    .one {
+        rotate: 45deg;
+        position: relative;
+    }
+
+    .three,
+    .two {
+        position: relative;
+    }
+
+    .one::before {
+        position: absolute;
+        content: "";
+    }
+
+    .two,
+    .two::after,
+    .two::before {
+        width: 106px;
+        height: 106px;
+        background: var(--two-color);
+        z-index: 2;
+    }
+
+    .two {
+        --two-color: #4F77FF;
+        transform: translate(35.6px, 35.6px);
+    }
+
+    .two::before {
+        position: absolute;
+        content: "";
+    }
+
+    .three,
+    .three::after,
+    .three::before {
+        width: 106px;
+        height: 106px;
+        background: var(--three-color);
+        z-index: 3;
+    }
+
+    .three {
+        --three-color: #191919;
+        transform: translate(35px, 35px);
+    }
+
+    .three::before {
+        position: absolute;
+        content: "";
+    }
+</style>

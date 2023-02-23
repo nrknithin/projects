@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="square"></div>
+</div>
+<style>
+    body {
+        --dim: 100.4px;
+        background: #0B2429;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        transform: translate(-0.1px, 35.5px);
+    }
+
+    .square {
+        rotate: 45deg;
+        background: #F3AC3C;
+        width: var(--dim);
+        height: var(--dim);
+        position: relative;
+    }
+
+    .square::before,
+    .square::after {
+        position: absolute;
+        content: "";
+    }
+
+    .square::before {
+        top: 0;
+        right: var(--dim);
+        width: calc(var(--dim) / 2);
+        height: var(--dim);
+        transform: skewY(45deg) translateY(-25px);
+        background: #998235;
+    }
+
+    .square::after {
+        bottom: var(--dim);
+        right: 0;
+        height: calc(var(--dim) / 2);
+        width: var(--dim);
+        transform: skewX(45deg) translateX(-25px);
+        background: #1A4341;
+    }
+</style>

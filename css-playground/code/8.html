@@ -1,0 +1,67 @@
+<div class="fork"></div>
+<div class="needlec">
+    <span class="needle"></span>
+    <span class="needle"></span>
+    <span class="needle"></span>
+    <span class="needle"></span>
+</div>
+
+<style>
+    body {
+        background: #6592CF;
+        display: flex;
+    }
+
+    .fork {
+        margin: auto;
+        width: 140px;
+        height: 100px;
+        background-color: #060F55;
+        border-radius: 0 0 100px 100px;
+        transform: translateY(50px);
+        position: relative;
+    }
+
+    .fork::after {
+        position: absolute;
+        content: "";
+        color: red;
+        width: 20px;
+        height: 70px;
+        background-color: #060F55;
+        transform: translate(60px, 80px);
+    }
+
+    .needlec {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        transform: translate(-50%, 0);
+        width: 140px;
+    }
+
+    .needle {
+        width: 20px;
+        height: 100px;
+        background-color: #060F55;
+        transform: translateY(-100px);
+        margin-right: 20px;
+        border-radius: 100px 100px 0 0;
+
+    }
+
+    .needle:last-child {
+        margin-right: 0
+    }
+
+    .needle::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 100px;
+        background-color: #6592CF;
+        border-radius: 100px 100px 0 0;
+        transform: translate(100%, 10px) rotate(180deg);
+    }
+</style>

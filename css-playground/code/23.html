@@ -1,0 +1,32 @@
+<div class='l'></div>
+<style>
+    .l,
+    .l::before {
+        border-style: solid
+    }
+
+    body {
+        margin: 0;
+        background: #f3ac3c;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    .l {
+        width: 100px;
+        height: 100px;
+        border-width: 100px 100px 0 0;
+        border-color: #1a4341;
+        position: relative
+    }
+
+    .l::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-width: 50px 0 0 50px;
+        border-color: #998235
+    }
+</style>

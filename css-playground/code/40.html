@@ -1,0 +1,38 @@
+<div class="letter-b"></div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #6592CF;
+    }
+
+
+    .letter-b {
+        width: 200px;
+        height: 200px;
+        background: #243D83;
+        border-radius: 0 50% 50% 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .letter-b:after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: #6592CF;
+        border-radius: 0 50% 50% 50%;
+    }
+
+    .letter-b:before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        transform: translate(-25px, -75px);
+        background: #6592CF;
+    }
+</style>

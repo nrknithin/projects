@@ -1,0 +1,45 @@
+<div class='star'></div>
+<div class='star'></div>
+<style>
+    body {
+        margin: 0;
+        background: #f3ac3c;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .star {
+        background: #1a4341;
+        height: 100px;
+        width: 200px;
+        position: relative
+    }
+
+    .star::after,
+    .star::before {
+        position: absolute;
+        content: "";
+        background: #f3ac3c;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%
+    }
+
+    .star::before {
+        left: -100px;
+        top: -100px
+    }
+
+    .star::after {
+        right: -100px;
+        top: -100px
+    }
+
+    body>.star:nth-child(2) {
+        rotate: 180deg
+    }
+</style>

@@ -1,0 +1,114 @@
+<div class="flower">
+    <div class="top">
+        <div class="top-circle"></div>
+        <div class="petal-one"></div>
+        <div class="petal-two"></div>
+        <div class="bottom-circle"></div>
+
+    </div>
+    <div class="stem">
+        <div class="bulb"></div>
+        <div class="foot"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+
+    .flower {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 140px;
+        height: 120px;
+        background: #191919;
+        position: relative;
+    }
+
+    .top-circle {
+        background: #4F77FF;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 5;
+        border: 10px solid #191919;
+        position: absolute;
+        top: -10px;
+    }
+
+    .petal-one {
+        background: #4F77FF;
+        width: 100px;
+        height: 30px;
+        border-radius: 20px 20px 50px 50px;
+        z-index: 4;
+        border: 10px solid #191919;
+        position: absolute;
+        bottom: 60px;
+
+    }
+
+    .petal-two {
+        background: #4F77FF;
+        width: 140px;
+        height: 30px;
+        border-radius: 20px 20px 50px 50px;
+        z-index: 3;
+        position: absolute;
+        border: 10px solid #191919;
+        bottom: 40px;
+    }
+
+    .bottom-circle {
+        background: #4F77FF;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .stem {
+        height: 90px;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .bulb {
+        position: absolute;
+        background: #F9E492;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: -20px;
+    }
+
+    .foot {
+        position: absolute;
+        background: #F9E492;
+        width: 20px;
+        height: 90px;
+        border-radius: 50px;
+        bottom: 0px
+    }
+</style>

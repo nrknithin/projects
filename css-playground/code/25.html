@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="yellow"></div>
+    <div class="green"></div>
+</div>
+<style>
+    body {
+        background: #998235;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 180px
+    }
+
+    .green,
+    .yellow {
+        transform: translateY(40px);
+        width: 80px;
+        position: relative
+    }
+
+    .yellow {
+        background: #f3ac3c;
+        height: 60px;
+        border-radius: 0 50px
+    }
+
+    .green,
+    .yellow::after {
+        background: #1a4341;
+        height: 100px
+    }
+
+    .green {
+        border-radius: 50px 0
+    }
+
+    .green::after,
+    .yellow::after {
+        position: absolute;
+        width: 80px
+    }
+
+    .yellow::after {
+        content: "";
+        top: -120px;
+        border-radius: 0 50px
+    }
+
+    .green::after {
+        content: "";
+        top: -80px;
+        background: #f3ac3c;
+        height: 60px;
+        border-radius: 50px 0
+    }
+</style>
