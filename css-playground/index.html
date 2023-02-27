@@ -118,6 +118,7 @@
         .overlay-text {
             font-weight: 700;
             font-size: 22px;
+            color: white;
         }
 
         #toast {
@@ -265,7 +266,7 @@
             cssBattle.appendChild(cssBattleLogo);
             cssBattle.href = `https://cssbattle.dev/play/${item?.id}`
             let showCode = document.createElement("div");
-            showCode.textContent = "Show Code";
+            showCode.textContent = "Copy Code";
             showCode.classList.add("copy-icon");
             showCode.addEventListener("click", () => showCodeFn(item.id))
             overlay.classList.add("overlay");
