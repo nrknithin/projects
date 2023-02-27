@@ -1,0 +1,97 @@
+<div class="notes">
+    <div class="note n-1">
+        <div class="ball"></div>
+        <div class="line"></div>
+    </div>
+    <div class="note n-2">
+        <div class="ball"></div>
+        <div class="line"></div>
+    </div>
+    <div class="note n-3">
+        <div class="ball"></div>
+        <div class="line"></div>
+    </div>
+    <div class="note n-4">
+        <div class="ball"></div>
+        <div class="line"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    .notes {
+        width: 290px;
+        height: 120px;
+        position: relative;
+        display: flex;
+        gap: 20px;
+    }
+
+    .note {
+        position: relative;
+        height: 120px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .n-1::after {
+        position: absolute;
+        content: "";
+        right: -60px;
+        width: 60px;
+        height: 10px;
+        background: #FE5F55;
+    }
+
+    .n-3::after {
+        position: absolute;
+        content: "";
+        right: -30px;
+        width: 30px;
+        height: 10px;
+        background: #A64942;
+    }
+
+    .n-4::before,
+    .n-4::after {
+        position: absolute;
+        content: "";
+        right: -30px;
+        width: 30px;
+        height: 10px;
+        background: #FE5F55;
+    }
+
+    .n-4::after {
+        top: 20px;
+    }
+
+    .ball {
+        width: 50px;
+        height: 40px;
+        background: #FE5F55;
+        position: absolute;
+        bottom: 0;
+        border-radius: 50%;
+    }
+
+    .line {
+        position: absolute;
+        right: 0;
+        width: 10px;
+        height: 100px;
+        background: #FE5F55;
+    }
+
+    .n-3>.ball,
+    .n-3>.line {
+        background: #A64942;
+    }
+</style>

@@ -1,0 +1,86 @@
+<div class="frog">
+    <div class="eyes">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="face">
+        <div class="upper">
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #293462;
+    }
+
+    .frog {
+        width: 150px;
+        height: 125px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .eyes {
+        display: flex;
+        justify-content: center;
+        column-gap: 40px;
+        width: 120px;
+        left: 15px;
+        top: 10px;
+        position: absolute;
+    }
+
+    .eyes div {
+        width: 10px;
+        height: 10px;
+        background: #293462;
+        border-radius: 50%;
+        border: 10px solid #FFF1C1;
+        outline: 10px solid #FE5F55;
+        z-index: 10;
+    }
+
+    .face {
+        z-index: 9;
+        top: 25px;
+        position: absolute;
+        height: 100px;
+        width: 150px;
+        background: #A64942;
+        border-radius: 50px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .upper {
+        bottom: 30px;
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: #FE5F55;
+        display: flex;
+        justify-content: center;
+    }
+
+    .upper::before,
+    .upper::after {
+        content: "";
+        bottom: 10px;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #293462;
+        transform: translateX(10px);
+    }
+
+    .upper::before {
+        transform: translateX(-10px);
+    }
+</style>

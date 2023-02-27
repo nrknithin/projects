@@ -1,0 +1,71 @@
+<div class='container'>
+
+    <div class="row">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+        <div class="box b3"></div>
+    </div>
+    <div class="row">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+        <div class="box b3"></div>
+    </div>
+    <div class="row">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+        <div class="box b3"></div>
+    </div>
+    <div class="row">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+        <div class="box b3"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #5DBCF9;
+    }
+
+    .container {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .row {
+        --dim: 140px;
+        min-width: var(--dim);
+        max-width: var(--dim);
+        height: 100%;
+    }
+
+    .row:nth-child(2n+2) {
+        transform: translateY(-50px);
+    }
+
+    .box {
+        height: 110px;
+        background: #191919;
+        position: relative;
+    }
+
+    .b1 {
+        transform: translateY(-30px);
+    }
+
+    .b2 {
+        transform: translateY(10px);
+    }
+
+    .b3 {
+        transform: translateY(50px);
+    }
+</style>

@@ -1,0 +1,136 @@
+<div class="container">
+    <div class="elephant">
+        <div class="top">
+            <div class="ear er"></div>
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+                <div class="tusk"></div>
+                <div class="trunk"></div>
+            </div>
+            <div class="ear el"></div>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background: #998235;
+    }
+
+    .container {
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end
+    }
+
+    .elephant {
+        width: 300px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+    }
+
+    .ear {
+        position: absolute;
+        height: 180px;
+        width: 80px;
+        background: #1A4341;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .ear::after {
+        content: "";
+        position: absolute;
+        height: 180px;
+        width: 80px;
+        background: #0B2429;
+        border-radius: 50%;
+    }
+
+    .el {
+        left: 0;
+    }
+
+    .el::after {
+        left: 16px;
+    }
+
+    .er {
+        right: 0;
+    }
+
+    .er::after {
+        right: 16px;
+    }
+
+    .face {
+        height: 180px;
+        width: 180px;
+        background: #1A4341;
+        border-radius: 50%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+
+    }
+
+    .eyes {
+        margin-top: 20px;
+        width: 100px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        overflow: hidden;
+    }
+
+    .eye {
+        width: 20px;
+        height: 20px;
+        border: 10px solid #998235;
+        background: #0B2429;
+        border-radius: 50%;
+    }
+
+    .tusk {
+        position: absolute;
+        bottom: -70px;
+        width: 80px;
+        height: 80px;
+        border: 20px solid #FFFFFF;
+        border-radius: 50%;
+        border-color: #FFFFFF transparent transparent #FFFFFF;
+        rotate: 45deg;
+    }
+
+    .trunk {
+        position: absolute;
+        top: 120px;
+        width: 40px;
+        height: 120px;
+        background: #0B2429;
+        border-radius: 50px 50px 0 0
+    }
+</style>

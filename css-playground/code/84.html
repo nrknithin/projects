@@ -1,0 +1,58 @@
+<div class="square">
+    <div class="line v t"></div>
+    <div class="line h l"></div>
+    <div class="line v b"></div>
+    <div class="line h r"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    .square {
+        width: 40px;
+        height: 40px;
+    }
+
+    .line {
+        position: absolute;
+
+
+    }
+
+    .v {
+        background: #FE5F55;
+        width: 40px;
+        height: 130px;
+    }
+
+    .h {
+        background: #A64942;
+        height: 40px;
+        width: 180px;
+    }
+
+    .t {
+        top: 0;
+        border-radius: 0 0 50px 50px;
+    }
+
+    .l {
+        left: 0;
+        border-radius: 0 50px 50px 0;
+    }
+
+    .r {
+        right: 0;
+        border-radius: 50px 0 0 50px;
+    }
+
+    .b {
+        bottom: 0px;
+        border-radius: 50px 50px 0 0;
+    }
+</style>

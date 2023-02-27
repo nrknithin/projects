@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="petals">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #243D83;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        overflow: hidden;
+        height: 300px;
+    }
+
+    .wrapper {
+        rotate: 45deg;
+        width: 220px;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .petals {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .petals div {
+        position: absolute;
+        width: 220px;
+        height: 100px;
+        background: #6592CF;
+        border-radius: 100px
+    }
+
+    .petals div:last-child {
+        position: absolute;
+        width: 100px;
+        height: 220px;
+        background: #6592CF;
+        border-radius: 100px
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        background: #243D83;
+        z-index: 2;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #EEB850;
+    }
+</style>

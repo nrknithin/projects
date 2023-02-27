@@ -1,0 +1,96 @@
+<div class="speaker">
+    <div class="box"></div>
+    <div class="triangle"></div>
+</div>
+<div class="wave">
+    <div class="cl1">
+
+        <div class="cl2">
+            <div class="cl3"></div>
+
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+        column-gap: 17px
+    }
+
+    .speaker {
+        width: 125px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .wave {
+        width: 100px;
+        height: 200px;
+        margin-left: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .box {
+        position: absolute;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        background: #5DBCF9;
+        border-radius: 10px 0 0 10px;
+        z-index: 2;
+    }
+
+    .triangle {
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 100px solid;
+        z-index: 2;
+        border-color: transparent #5DBCF9 transparent transparent;
+    }
+
+    .cl1 {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border: 10px solid #5DBCF9;
+        border-radius: 50%;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cl2 {
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        border: 10px solid #5DBCF9;
+        border-radius: 50%;
+        left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cl3 {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border: 10px solid #5DBCF9;
+        border-radius: 50%;
+        left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

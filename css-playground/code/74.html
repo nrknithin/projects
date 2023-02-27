@@ -1,0 +1,186 @@
+<div class="curve c-one"></div>
+<div class="line l-one"></div>
+<div class="curve c-two"></div>
+<div class="line l-two"></div>
+<div class="curve c-three"></div>
+<div class="line l-three"></div>
+<div class="curve c-four"></div>
+<div class="line l-four"></div>
+<div class="curve c-five"></div>
+<div class="line l-five"></div>
+<div class="neck"></div>
+<div class="head">
+    <div class="eyes">
+        <div class="eye"></div>
+        <div class="eye"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        background: #191919;
+    }
+
+
+    .curve {
+
+        width: 40px;
+        height: 20px;
+        border-radius: 0 0 100px 100px;
+        border: 10px solid #191919;
+        border-width: 0 10px 10px 10px;
+        position: relative;
+    }
+
+    .c-one {
+        transform: translate(-30px, -10px);
+    }
+
+    .curve::before {
+        content: "";
+        left: -15px;
+        width: 60px;
+        height: 30px;
+        border-radius: 0 0 100px 100px;
+        border: 5px solid #E08027;
+        border-width: 0 5px 5px 5px;
+        position: absolute;
+    }
+
+    .curve::after {
+        content: "";
+        bottom: 0px;
+        left: 0px;
+        width: 30px;
+        height: 15px;
+        border-radius: 0 0 100px 100px;
+        border: 5px solid #E08027;
+        border-width: 0 5px 5px 5px;
+        position: absolute;
+    }
+
+    .line {
+        position: absolute;
+        width: 10px;
+        background: #191919;
+
+        border: 5px solid #E08027;
+        border-width: 0px 5px;
+    }
+
+    .c-two {
+        rotate: 180deg;
+        top: -90px;
+        left: -40px
+    }
+
+    .c-three {
+        top: 90px;
+        left: -50px;
+    }
+
+    .c-four {
+        rotate: 180deg;
+        top: -90px;
+        left: -60px;
+    }
+
+    .c-five {
+        top: 90px;
+        left: -70px;
+    }
+
+    .l-one {
+        left: 15px;
+        height: 60px;
+        bottom: 170px;
+    }
+
+    .l-two {
+        left: 65px;
+        height: 160px;
+        top: 70px;
+    }
+
+    .l-three {
+        left: 115px;
+        height: 160px;
+        top: 70px;
+    }
+
+    .l-four {
+        left: 165px;
+        height: 160px;
+        top: 70px;
+    }
+
+    .l-five {
+        left: 215px;
+        height: 60px;
+        top: 170px;
+    }
+
+    .neck {
+        rotate: 180deg;
+        width: 40px;
+        height: 20px;
+        border-radius: 0 0 100px 0;
+        border: 10px solid #191919;
+        border-width: 0 10px 10px 0;
+        position: relative;
+        transform: translate(80px, -10px);
+    }
+
+    .neck::before {
+        content: "";
+        left: -10px;
+        width: 60px;
+        height: 30px;
+        border-radius: 0 0 100px 0;
+        border: 5px solid #E08027;
+        border-width: 0 5px 5px 0;
+        position: absolute;
+    }
+
+    .neck::after {
+        content: "";
+        bottom: 0px;
+        left: 5px;
+        width: 30px;
+        height: 15px;
+        border-radius: 0 0 100px 0;
+        border: 5px solid #E08027;
+        border-width: 0 5px 5px 0;
+        position: absolute;
+    }
+
+    .head {
+        position: absolute;
+        width: 50px;
+        height: 30px;
+        background: #E08027;
+        right: 85px;
+        border-radius: 13px 20px 20px 13px;
+        display: flex;
+        align-items: center
+    }
+
+    .eyes {
+        position: absolute;
+        width: 10px;
+        height: 26px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .eye {
+        width: 10px;
+        height: 10px;
+        background: #191919;
+        border-radius: 50%;
+    }
+</style>

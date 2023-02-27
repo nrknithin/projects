@@ -1,0 +1,70 @@
+<div class="block">
+    <div class="box t"></div>
+    <div class="center"></div>
+    <div class="box b"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F3AC3C;
+    }
+
+    .block {
+        width: 270px;
+        height: 170px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        position: absolute;
+        background: #1A4341;
+        border-radius: 10px 0 10px 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .box::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #1A4341;
+        right: -50px;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #1A4341;
+        top: 50px;
+        right: -20px;
+    }
+
+    .t {
+        top: 0;
+        left: 0;
+    }
+
+    .b {
+        rotate: 180deg;
+        bottom: 0;
+        right: 0;
+    }
+
+    .center {
+        width: 70px;
+        height: 70px;
+        background: #F3AC3C;
+        border-radius: 10px;
+        z-index: 10;
+    }
+</style>

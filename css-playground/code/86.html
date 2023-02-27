@@ -1,0 +1,47 @@
+<div class="window">
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    .window {
+        width: 100px;
+        height: 150px;
+        border-radius: 50px 50px 0 0;
+        background: #4F77FF;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4px;
+    }
+
+    .stair {
+        height: 20px;
+        width: 100px;
+        background: #191919;
+    }
+
+    .window>div:nth-child(1) {
+        transform: translateX(20px)
+    }
+
+    .window>div:nth-child(2) {
+        transform: translateX(40px)
+    }
+
+    .window>div:nth-child(3) {
+        transform: translateX(60px)
+    }
+
+    .window>div:nth-child(4) {
+        transform: translateX(80px)
+    }
+</style>

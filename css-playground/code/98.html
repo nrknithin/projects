@@ -1,0 +1,73 @@
+<div class="candle">
+    <div class="base"></div>
+    <div class="stem"></div>
+    <div class="head">
+        <div class="invisible"></div>
+    </div>
+    <div class="light"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #14313E;
+    }
+
+    .candle {
+        width: 80px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .base {
+        width: 80px;
+        height: 30px;
+        background: #BA3E46;
+        border-radius: 50%;
+
+    }
+
+    .stem {
+        transform: translateY(15px);
+        width: 80px;
+        height: 100px;
+        background: #BA3E46;
+    }
+
+    .head {
+        transform: translateY(30px);
+        width: 80px;
+        height: 30px;
+        background: #F3695A;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+    }
+
+    .invisible {
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        background: #14313E;
+        bottom: 10px;
+        border-radius: 50%;
+    }
+
+    .light {
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        width: 30px;
+        height: 50px;
+        background: #F3AC3C;
+        border-radius: 30px 0;
+    }
+</style>

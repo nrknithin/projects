@@ -1,0 +1,72 @@
+<div class="sharingan">
+    <div class="circle center">
+        <span class="bottom">
+            <div class="circle semi"></div>
+        </span>
+        <span class="right">
+            <div class="circle semi"></div>
+        </span>
+        <span class="left">
+            <div class="circle semi"></div>
+        </span>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #161616;
+    }
+
+    .sharingan {
+        width: 190px;
+        height: 190px;
+        background: #A22015;
+        border: 5px solid #000000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .circle {
+        outline: 15px solid #000000;
+        border-radius: 50%;
+    }
+
+    .center {
+        width: 50px;
+        height: 50px;
+        border: 10px solid #E96A23;
+        background: #000000;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center span {
+        position: absolute;
+        width: 100px;
+        height: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .semi {
+        width: 70px;
+        height: 70px;
+    }
+
+    .right {
+        rotate: -120deg;
+    }
+
+    .left {
+        rotate: 120deg;
+    }
+</style>

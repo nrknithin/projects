@@ -1,0 +1,60 @@
+<div class="outer">
+    <div class="middle">
+        <div class="inner"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F3AC3C;
+    }
+
+    .outer {
+        transform: translate(-1px, 1px);
+        width: 160px;
+        height: 160px;
+        rotate: 45deg;
+        background: #998235;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .middle {
+        width: 100px;
+        height: 100px;
+        background: #F3AC3C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner {
+        transform: translateY(0.5px);
+        width: 30px;
+        height: 30px;
+        background: #1A4341;
+        position: relative;
+    }
+
+    .inner::after,
+    .inner::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 35px;
+        background: #F3AC3C;
+        bottom: 65px;
+    }
+
+    .inner::before {
+        rotate: 90deg;
+        right: 65px;
+        bottom: -2.5px;
+
+    }
+</style>

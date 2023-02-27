@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="round"></div>
+    <div class="connect"></div>
+    <div class="round"></div>
+    <div class="connect"></div>
+    <div class="round"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        background: #6592CF;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .container {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        background: #6592CF;
+        transform: translateX(-126px)
+    }
+
+    .round {
+        min-width: 200px;
+        height: 200px;
+        background: #243D83;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .round::before,
+    .round::after {
+        position: absolute;
+        content: "";
+        width: 25px;
+        height: 40px;
+        background: #243D83;
+        right: -20px;
+    }
+
+    .round::after {
+        left: -20px;
+
+    }
+
+    .connect {
+        min-width: 26px;
+        height: 40px;
+        z-index: 2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .connect::before {
+
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 20px;
+        background: #6592CF;
+        top: -10px;
+        border-radius: 0 0 32px 32px;
+    }
+
+    .connect::after {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 20px;
+        background: #6592CF;
+        bottom: -10px;
+        border-radius: 32px 32px 0 0;
+    }
+</style>

@@ -1,0 +1,113 @@
+<div class="container">
+
+    <div class="bat">
+        <div class="head-wrapper">
+            <div class="head"></div>
+        </div>
+        <div class="wingr"></div>
+        <div class="wingl"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background: #191919;
+    }
+
+    .container {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .bat {
+        margin-top: 100px;
+        width: 250px;
+        height: 80px;
+        background: #F2AD43;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .head-wrapper {
+        background: #191919;
+        height: 30px;
+        width: 80px;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        justify-content: center;
+
+        align-items: flex-end;
+    }
+
+    .head {
+        background: #F2AD43;
+        height: 20px;
+        width: 20px;
+        border-radius: 5px 5px 0px 0px;
+        position: relative;
+    }
+
+    .head::before {
+        content: "";
+        background: #F2AD43;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        position: absolute;
+        left: -5px;
+        top: -5px;
+    }
+
+    .head::after {
+        content: "";
+        background: #F2AD43;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+    }
+
+    .wingr,
+    .wingl {
+        position: absolute;
+        background: #191919;
+        height: 100px;
+        border-radius: 50%;
+        width: 100px;
+        right: -50px;
+    }
+
+    .wingl {
+        left: -50px;
+    }
+
+    .wingl::before {
+        content: "";
+        position: absolute;
+        background: #191919;
+        height: 200px;
+        border-radius: 50%;
+        width: 200px;
+        left: 15px;
+        bottom: -160px
+    }
+
+    .wingr::after {
+        content: "";
+        position: absolute;
+        background: #191919;
+        height: 200px;
+        border-radius: 50%;
+        width: 200px;
+        right: 15px;
+        bottom: -160px
+    }
+</style>

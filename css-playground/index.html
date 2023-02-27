@@ -49,18 +49,85 @@
         .tile {
             max-width: 400px;
             max-height: 300px;
-            width: 400px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
             border-radius: 2px;
             background-color: rgb(80, 80, 80);
             -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
             -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
             box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
             margin: auto;
             border: 0;
+            z-index: 1;
+
+        }
+
+        .tile-container {
+            max-width: 400px;
+            max-height: 300px;
+            width: 400px;
+            height: 300px;
+            position: relative;
+            margin: auto;
+            border: 0;
+        }
+
+        .overlay {
+            top: 0;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .css-battle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px
+        }
+
+        .cssbattle-icon {
+            width: 50px;
+            height: 30px;
+        }
+
+        .copy-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 10px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-weight: 700;
+        }
+
+        .overlay:hover {
+
+            opacity: 1;
+        }
+
+        .overlay-text {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        #toast {
+            position: fixed;
+            bottom: 20px;
+            background-color: grey;
+            padding: 7px;
+            border-radius: 10px;
+            font-weight: 500;
+            opacity: 0;
         }
     </style>
 </head>
@@ -69,119 +136,164 @@
     <h1>CSS PlayGround</h1>
     <div class='container' id='main-container'>
     </div>
+    <div id="toast">Code copied to clipboard</div>
     <script>
 
         let mainContainer = document.querySelector("#main-container");
+        let toast = document.querySelector("#toast");
         const dataArray = [
             { name: "Simply Square", id: "1" },
             { name: "Carrom", id: "2" },
             { name: "Push Button", id: "3" },
-            { name: "Push Button", id: "4" },
-            { name: "Push Button", id: "5" },
-            { name: "Push Button", id: "6" },
-            { name: "Push Button", id: "7" },
-            { name: "Push Button", id: "8" },
-            { name: "Push Button", id: "9" },
-            { name: "Push Button", id: "10" },
-            { name: "Push Button", id: "11" },
-            { name: "Push Button", id: "12" },
-            { name: "Push Button", id: "13" },
-            { name: "Push Button", id: "14" },
-            { name: "Push Button", id: "15" },
-            { name: "Push Button", id: "16" },
-            { name: "Push Button", id: "17" },
-            { name: "Push Button", id: "18" },
-            { name: "Push Button", id: "19" },
-            { name: "Push Button", id: "20" },
-            { name: "Push Button", id: "21" },
-            { name: "Push Button", id: "22" },
-            { name: "Push Button", id: "23" },
-            { name: "Push Button", id: "24" },
-            { name: "Push Button", id: "25" },
-            { name: "Push Button", id: "26" },
-            { name: "Push Button", id: "27" },
-            { name: "Push Button", id: "28" },
-            { name: "Push Button", id: "29" },
-            { name: "Push Button", id: "30" },
-            { name: "Push Button", id: "31" },
-            { name: "Push Button", id: "32" },
-            { name: "Push Button", id: "33" },
-            { name: "Push Button", id: "34" },
-            { name: "Push Button", id: "35" },
-            { name: "Push Button", id: "36" },
-            { name: "Push Button", id: "37" },
-            { name: "Push Button", id: "38" },
-            { name: "Push Button", id: "39" },
-            { name: "Push Button", id: "40" },
-            { name: "Push Button", id: "41" },
-            { name: "Push Button", id: "42" },
-            { name: "Push Button", id: "43" },
-            { name: "Push Button", id: "44" },
-            { name: "Push Button", id: "45" },
-            { name: "Push Button", id: "46" },
-            { name: "Push Button", id: "47" },
-            { name: "Push Button", id: "48" },
-            { name: "Push Button", id: "49" },
-            { name: "Push Button", id: "50" },
-            { name: "Push Button", id: "51" },
-            { name: "Push Button", id: "52" },
-            { name: "Push Button", id: "53" },
-            { name: "Push Button", id: "54" },
-            { name: "Push Button", id: "55" },
-            { name: "Push Button", id: "56" },
-            { name: "Push Button", id: "57" },
-            { name: "Push Button", id: "58" },
-            { name: "Push Button", id: "59" },
-            { name: "Push Button", id: "60" },
-            { name: "Push Button", id: "61" },
-            { name: "Push Button", id: "62" },
-            { name: "Push Button", id: "63" },
-            { name: "Push Button", id: "64" },
-            { name: "Push Button", id: "65" },
-            { name: "Push Button", id: "66" },
-            { name: "Push Button", id: "67" },
-            { name: "Push Button", id: "68" },
-            { name: "Push Button", id: "69" },
-            { name: "Push Button", id: "70" },
-            { name: "Push Button", id: "71" },
-            { name: "Push Button", id: "72" },
-            { name: "Push Button", id: "73" },
-            { name: "Push Button", id: "74" },
-            { name: "Push Button", id: "75" },
-            { name: "Push Button", id: "76" },
-            { name: "Push Button", id: "77" },
-            { name: "Push Button", id: "78" },
-            { name: "Push Button", id: "79" },
-            { name: "Push Button", id: "80" },
-            { name: "Push Button", id: "81" },
-            { name: "Push Button", id: "82" },
-            { name: "Push Button", id: "83" },
-            { name: "Push Button", id: "84" },
-            { name: "Push Button", id: "85" },
-            { name: "Push Button", id: "86" },
-            { name: "Push Button", id: "87" },
-            { name: "Push Button", id: "88" },
-            { name: "Push Button", id: "89" },
-            { name: "Push Button", id: "90" },
-            { name: "Push Button", id: "91" },
-            { name: "Push Button", id: "92" },
-            { name: "Push Button", id: "93" },
-            { name: "Push Button", id: "94" },
-            { name: "Push Button", id: "95" },
-            { name: "Push Button", id: "96" },
-            { name: "Push Button", id: "97" },
-            { name: "Push Button", id: "98" },
-            { name: "Push Button", id: "99" },
+            { name: "Ups n Downs", id: "4" },
+            { name: "Acid Rain", id: "5" },
+            { name: "Missing Slice", id: "6" },
+            { name: "Leafy Trail", id: "7" },
+            { name: "Forking Crazy", id: "8" },
+            { name: "Tesseract", id: "9" },
+            { name: "Cloaked Spirits", id: "10" },
+            { name: "Eye of Sauron", id: "11" },
+            { name: "Wiggly Moustache", id: "12" },
+            { name: "Totally Triangle", id: "13" },
+            { name: "Web Maker Logo", id: "14" },
+            { name: "Overlap", id: "15" },
+            { name: "Eye of the Tiger", id: "16" },
+            { name: "Fidget Spinner", id: "17" },
+            { name: "Matrix", id: "18" },
+            { name: "Cube", id: "19" },
+            { name: "Ticket", id: "20" },
+            { name: "SitePoint Logo", id: "21" },
+            { name: "Cloud", id: "22" },
+            { name: "Boxception", id: "23" },
+            { name: "Switches", id: "24" },
+            { name: "Blossom", id: "25" },
+            { name: "Smiley", id: "26" },
+            { name: "Lock Up", id: "27" },
+            { name: "Cups & Balls", id: "28" },
+            { name: "Suffocate", id: "29" },
+            { name: "Horizon", id: "30" },
+            { name: "Equals", id: "31" },
+            { name: "Band-aid", id: "32" },
+            { name: "Birdie", id: "33" },
+            { name: "Christmas Tree", id: "34" },
+            { name: "Ice Cream", id: "35" },
+            { name: "Interleaved", id: "36" },
+            { name: "Tunnel", id: "37" },
+            { name: "Not Simply Square", id: "38" },
+            { name: "Sunset", id: "39" },
+            { name: "Letter B", id: "40" },
+            { name: "Fox Head", id: "41" },
+            { name: "Baby", id: "42" },
+            { name: "Wrench", id: "43" },
+            { name: "Stripes", id: "44" },
+            { name: "Magical Tree", id: "45" },
+            { name: "Mountains", id: "46" },
+            { name: "Corona Virus", id: "47" },
+            { name: "Wash Your Hands", id: "48" },
+            { name: "Stay at Home", id: "49" },
+            { name: "Use Hand Sanitizer", id: "50" },
+            { name: "Wear a Mask", id: "51" },
+            { name: "Break the Chain", id: "52" },
+            { name: "Pastel Logo", id: "53" },
+            { name: "Black Lives Matter", id: "54" },
+            { name: "Windmill", id: "55" },
+            { name: "Skull", id: "56" },
+            { name: "Pillars", id: "57" },
+            { name: "Rose", id: "58" },
+            { name: "Earth", id: "59" },
+            { name: "Evil Triangles", id: "60" },
+            { name: "ImprovMX", id: "61" },
+            { name: "Sunset", id: "62" },
+            { name: "Command Key", id: "63" },
+            { name: "Door Knob", id: "64" },
+            { name: "Max Volume", id: "65" },
+            { name: "Batmicky", id: "66" },
+            { name: "Video Reel", id: "67" },
+            { name: "Bell", id: "68" },
+            { name: "PushOwl", id: "69" },
+            { name: "Froggy", id: "70" },
+            { name: "Elephant", id: "71" },
+            { name: "Sheep", id: "72" },
+            { name: "Happy Tiger", id: "73" },
+            { name: "Danger Noodle", id: "74" },
+            { name: "Hippo", id: "75" },
+            { name: "Beeee", id: "76" },
+            { name: "Notes", id: "77" },
+            { name: "Ukulele", id: "78" },
+            { name: "Tambourine", id: "79" },
+            { name: "Piano", id: "80" },
+            { name: "Odoo", id: "81" },
+            { name: "Diamond Cut", id: "82" },
+            { name: "Supernova", id: "83" },
+            { name: "Junction", id: "84" },
+            { name: "Pythagoras", id: "85" },
+            { name: "Stairway", id: "86" },
+            { name: "Building Blocks", id: "87" },
+            { name: "Tight Corner", id: "88" },
+            { name: "Summit", id: "89" },
+            { name: "Eclipse", id: "90" },
+            { name: "Reflection", id: "91" },
+            { name: "Squeeze", id: "92" },
+            { name: "Great Wall", id: "93" },
+            { name: "Ripples", id: "94" },
+            { name: "Pokeball", id: "95" },
+            { name: "Mandala", id: "96" },
+            { name: "Snowman", id: "97" },
+            { name: "Candle", id: "98" },
+            { name: "Gift Box", id: "99" },
+            { name: "CSSBattle", id: "100" },
+            { name: "Sharingan", id: "101" },
+            // { name: "One Piece", id: "102" },
+            // { name: "Super Saiyan", id: "103" },
+            // { name: "Amegakure", id: "104" },
+            // { name: "Ryuk", id: "105" },
+            // { name: "Ryuk's Apple", id: "106" },
+            // { name: "Sealing Wand", id: "107" },
+            // { name: "Clow Card", id: "108" },
 
 
         ];
         let cssTiles = dataArray.map((item) => {
+            let div = document.createElement("div");
+            div.classList.add("tile-container");
+            let overlay = document.createElement("div");
+            let cssBattle = document.createElement("a");
+            cssBattle.classList.add("css-battle-container")
+            let cssBattleLogo = document.createElement("img");
+            cssBattleLogo.classList.add("cssbattle-icon")
+            cssBattleLogo.src = "./assets/cssbattle.png";
+            cssBattle.appendChild(cssBattleLogo);
+            cssBattle.href = `https://cssbattle.dev/play/${item?.id}`
+            let showCode = document.createElement("div");
+            showCode.textContent = "Show Code";
+            showCode.classList.add("copy-icon");
+            showCode.addEventListener("click", () => showCodeFn(item.id))
+            overlay.classList.add("overlay");
+            let overlayText = document.createElement("div");
+            overlayText.classList.add("overlay-text");
+            overlayText.textContent = item.name;
+            overlay.append(cssBattle, overlayText, showCode)
             let tile = document.createElement("iframe");
             tile.classList.add("tile");
             tile.src = `./code/${item.id}.html`;
-            return tile;
+            div.append(tile, overlay)
+            return div;
         })
         mainContainer.append(...cssTiles)
+        async function showCodeFn(id) {
+            const codeRes = await fetch(`./code/${id}.html`)
+            const code = await codeRes.text()
+            const codeText = code.toString()
+            navigator.clipboard.writeText(codeText);
+            toastFn()
+        }
+        function toastFn() {
+            toast.style.opacity = 1
+            const timeout = setTimeout(() => {
+                toast.style.opacity = 0;
+                clearTimeout(timeout)
+            }, 1500)
+        }
     </script>
 </body>
 

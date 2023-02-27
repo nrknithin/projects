@@ -1,0 +1,56 @@
+<div class="top">
+    <div class="moon"></div>
+</div>
+<div class="bottom">
+    <div class="moon">
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <div class="strip"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+
+    }
+
+    .top,
+    .bottom {
+        width: 400px;
+        height: 150px;
+        background: #D25B70;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+
+    .bottom {
+        background: #6CB3A9;
+        rotate: 180deg;
+    }
+
+    .moon {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: -100px;
+        border-radius: 50%;
+        background: #F6DF96;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom>.moon {
+        background: #6CB3A9;
+        overflow: hidden;
+        gap: 15px
+    }
+
+    .strip {
+        width: 200px;
+        height: 10px;
+        background: #F6DF96;
+    }
+</style>

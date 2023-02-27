@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="mt back"></div>
+    <div class="moon">
+        <div class="mt front"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    .container {
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+        position: relative;
+    }
+
+    .mt,
+    .moon {
+        position: absolute;
+    }
+
+    .mt {
+        width: 200px;
+        height: 200px;
+        rotate: 45deg;
+    }
+
+    .back {
+        background: #4F77FF;
+        bottom: -100.3px;
+        z-index: 1;
+
+    }
+
+    .front {
+        background: #191919;
+        bottom: -150.3px;
+        z-index: 3;
+    }
+
+    .moon {
+        z-index: 2;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        background: #F9E492;
+        border-radius: 50%;
+    }
+</style>

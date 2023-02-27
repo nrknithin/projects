@@ -1,0 +1,99 @@
+<div class="ukulele">
+    <div class="base">
+        <div class="p1"></div>
+        <div class="p2"></div>
+    </div>
+    <div class="neck"></div>
+    <div class="head"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F3AC3C;
+    }
+
+    .ukulele {
+        width: 310px;
+        height: 120px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .base {
+        width: 170px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .p1 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: #998235;
+        border-radius: 50%;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .p1::after {
+        left: 40px;
+        position: absolute;
+        content: "";
+        height: 40px;
+        width: 10px;
+        border-radius: 10px;
+        background: #1A4341;
+    }
+
+    .p2 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #1A4341;
+        border-radius: 50%;
+        right: 25px;
+        border: 5px solid #F3AC3C;
+        outline: 25px solid #998235;
+    }
+
+    .neck {
+        width: 104px;
+        height: 20px;
+        background: #1A4341;
+        transform: translateX(-2px);
+    }
+
+    .head {
+        position: absolute;
+        right: 0;
+        width: 40px;
+        height: 30px;
+        background: #998235;
+        border-radius: 10px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .head::before,
+    .head::after {
+        content: "";
+        width: 20px;
+        height: 4px;
+        background: #1A4341;
+        border-radius: 10px;
+        z-index: 10;
+    }
+</style>

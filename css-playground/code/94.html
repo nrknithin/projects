@@ -1,0 +1,63 @@
+<div class="ripple">
+    <div class="ring1">
+        <div class="ring2"></div>
+
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0E2E2C;
+    }
+
+    .ripple {
+        --max-dim: 180px;
+        --border: 14px;
+        --outline: 6px;
+        --borderless: calc(var(--max-dim) - var(--border));
+        width: calc(var(--borderless) - var(--outline));
+        height: calc(var(--borderless) - var(--outline));
+        border-radius: 50%;
+        background: #F3AC3C;
+        outline: var(--outline) solid #F3AC3C;
+        border: var(--border) solid #0E2E2C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ring1 {
+        --max-dim: 122px;
+        --border: 10px;
+        --outline: 12px;
+        --borderless: calc(var(--max-dim) - var(--border));
+        width: calc(var(--borderless) - var(--outline));
+        height: calc(var(--borderless) - var(--outline));
+        border-radius: 50%;
+        background: #0E2E2C;
+        outline: var(--outline) solid #0E2E2C;
+        border: var(--border) solid #998235;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ring2 {
+        --max-dim: 60px;
+        --border: 8px;
+        --outline: 12px;
+        --borderless: calc(var(--max-dim) - var(--border));
+        width: calc(var(--borderless) - var(--outline));
+        height: calc(var(--borderless) - var(--outline));
+        border-radius: 50%;
+        background: #F3AC3C;
+        outline: var(--outline) solid #F3AC3C;
+        border: var(--border) solid #0E2E2C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

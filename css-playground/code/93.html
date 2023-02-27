@@ -1,0 +1,92 @@
+<div class="circle">
+    <div class="sky">
+        <div class="sun"></div>
+    </div>
+    <div class="sea">
+        <div class="wrapper">
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #4F77FF;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        background: #191919;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sky,
+    .sea {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        background: #191919;
+        border-radius: 100px 100px 0 0;
+        position: relative;
+    }
+
+    .sea {
+        border-radius: 0 0 100px 100px;
+    }
+
+    .wrapper {
+        position: absolute;
+        top: 15.5px;
+        width: 20px;
+        height: 68px;
+        left: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transform: skewY(-33deg);
+    }
+
+    .strip {
+        width: 20px;
+        height: 16px;
+        background: #D6B73F;
+        position: relative;
+    }
+
+    .strip::before,
+    .strip::after {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 16px;
+        background: #F9E492;
+        right: 0px;
+        top: 0px;
+        transform: skewY(33deg) translate(-20px, -19.5px);
+
+    }
+
+    .strip::after {
+        right: unset;
+        left: 0;
+        transform: skewY(33deg) translate(20px, 19.5px);
+    }
+
+    .sun {
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        width: 40px;
+        height: 40px;
+        background: #F9E492;
+        border-radius: 50%;
+    }
+</style>

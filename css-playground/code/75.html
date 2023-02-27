@@ -1,0 +1,122 @@
+<div class="ears">
+    <div class="ear"></div>
+    <div class="ear"></div>
+</div>
+<div class="face">
+    <div class="forehead">
+        <div class="eyes">
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+    </div>
+    <div class="chin">
+        <div class="nose">
+            <div class="nostrils"></div>
+            <div class="nostrils"></div>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    .face {
+        position: absolute;
+        transform: translateY(10px);
+        width: 150px;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ears {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        top: 70px;
+        display: flex;
+        justify-content: space-between
+    }
+
+    .ear {
+        height: 20px;
+        width: 10px;
+        background: #000000;
+        border-radius: 50%;
+        rotate: -45deg;
+        border: 5px solid #FE5F55;
+    }
+
+    .ears>div:last-child {
+        rotate: 45deg;
+    }
+
+    .forehead {
+        width: 130px;
+        height: 100px;
+        background: #FE5F55;
+        position: absolute;
+        top: 0;
+        border-radius: 60px 60px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eyes {
+        position: absolute;
+        width: 80px;
+        height: 10px;
+        top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .eye {
+        height: 10px;
+        width: 10px;
+        background: #000000;
+        border-radius: 50%;
+
+    }
+
+    .chin {
+        width: 150px;
+        height: 100px;
+        background: #A64942;
+        position: absolute;
+        bottom: 0;
+        border-radius: 100px 100px 80px 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nose {
+        position: absolute;
+        width: 100px;
+        height: 20px;
+        top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nostrils {
+        height: 30px;
+        width: 20px;
+        background: #000000;
+        border-radius: 50%;
+        rotate: 45deg
+    }
+
+    .nose>div:last-child {
+        rotate: -45deg
+    }
+</style>

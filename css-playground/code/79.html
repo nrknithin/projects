@@ -1,0 +1,107 @@
+<div class='container'>
+
+    <div class="tambourine"></div>
+    <div class="circle-wrapper">
+        <div class="circle top"></div>
+        <div class="circle middle right"></div>
+        <div class="circle middle left"></div>
+        <div class="circle bottom right"></div>
+        <div class="circle bottom left"></div>
+    </div>
+    <div class="hidden"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        background: #6592CF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        height: 300px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .tambourine {
+        transform: translateY(10px);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 10px solid #243D83;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tambourine::after {
+        content: "";
+        position: absolute;
+        top: 115px;
+        width: 96px;
+        height: 90px;
+        border-radius: 50%;
+        border: 10px solid #243D83;
+        z-index: 2;
+    }
+
+    .circle-wrapper {
+        transform: translateY(10px);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hidden {
+        position: absolute;
+        width: 96px;
+        height: 90px;
+        border-radius: 50%;
+        background: #6592CF;
+        bottom: 0px;
+        z-index: 2;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        background: #243D83;
+        border-radius: 50%;
+        border: 10px solid #6592CF;
+        outline: 10px solid #243D83;
+        position: absolute;
+    }
+
+    .top {
+        top: -20px
+    }
+
+    .middle {
+        top: 20px
+    }
+
+    .right {
+        right: -10px
+    }
+
+    .left {
+        left: -10px
+    }
+
+    .bottom {
+        bottom: 30px
+    }
+</style>

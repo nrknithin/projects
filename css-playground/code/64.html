@@ -1,0 +1,68 @@
+<div class="circle">
+    <div class="small-c">
+        <div class="smile"></div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+
+    .circle {
+        width: 160px;
+        height: 160px;
+        background: #824B20;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .small-c {
+        width: 100px;
+        height: 100px;
+        background: #E08027;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .smile {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border: 20px solid;
+        border-radius: 50%;
+        top: -10px;
+        right: -10px;
+        border-color: transparent #FFF58F #FFF58F transparent;
+        rotate: 45deg;
+
+    }
+
+    .smile::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        left: -5.5px;
+        bottom: -5.5px;
+        background: #FFF58F;
+    }
+
+    .smile::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        right: -5.5px;
+        top: -5.5px;
+        background: #FFF58F;
+    }
+</style>

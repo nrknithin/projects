@@ -1,0 +1,47 @@
+<div class="odoo">
+    <div class="o"></div>
+    <div class="d"></div>
+    <div class="o"></div>
+    <div class="o"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191919;
+    }
+
+    .odoo {
+        transform: translateY(12px);
+        width: 326px;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .o,
+    .d {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 20px solid #8F8F8F;
+        position: relative;
+    }
+
+    .odoo>div:first-child {
+        border-color: #714B67;
+    }
+
+    .odoo>div:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        background: #8F8F8F;
+        right: -20px;
+        bottom: 10px;
+        height: 70px;
+        width: 20px;
+        border-radius: 20px;
+    }
+</style>

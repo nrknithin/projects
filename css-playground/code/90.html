@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="top"></div>
+    <div class="center"></div>
+    <div class="bottom"></div>
+</div>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #F3AC3C;
+    }
+
+    .container {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 400px;
+        height: 300px;
+    }
+
+    .bottom,
+    .top {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        bottom: -250px;
+        z-index: 3;
+        background: #998235;
+        border-radius: 50%
+    }
+
+    .top {
+        bottom: unset;
+        top: -250px;
+        z-index: 1;
+    }
+
+    .center {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        z-index: 2;
+        background: #1A4341;
+        border-radius: 50%;
+        border: 25px solid #F3AC3C;
+    }
+</style>
