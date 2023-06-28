@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let particleArray = [];
-let toggler = -1;
+let toggler = -5;
 // mouse
 let mouse = {
   x: null,
@@ -61,8 +61,6 @@ const drawImage = () => {
 
       if (force < 0) force = 0;
       let directionX = forceDirectionX * force * this.density * 0.6 * toggler;
-      if (toggler === 1) toggler = -1;
-      else toggler = 1;
       let directionY = forceDirectionY * force * this.density * 0.6 * toggler;
       if (distance < mouse.radius + this.size) {
         this.x -= directionX;
